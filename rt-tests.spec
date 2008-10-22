@@ -1,5 +1,5 @@
 %define name rt-tests
-%define version 0.27
+%define version 0.28
 %define release %mkrel 1
 
 Summary: Programs that test various rt-features
@@ -9,7 +9,7 @@ Release: %{release}
 License: GPLv2
 Group:   Development/Other
 URL:     http://rt.wiki.kernel.org/index.php/Cyclictest
-Source0: %{name}-%{version}.tar.bz2
+Source0: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
