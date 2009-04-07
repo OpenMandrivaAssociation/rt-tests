@@ -1,5 +1,5 @@
 %define name rt-tests
-%define version 0.30
+%define version 0.34
 %define release %mkrel 1
 
 Summary: Programs that test various rt-features
