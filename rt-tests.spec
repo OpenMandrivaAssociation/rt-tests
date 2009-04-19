@@ -1,5 +1,5 @@
 %define name rt-tests
-%define version 0.34
+%define version 0.35
 %define release %mkrel 1
 
 Summary: Programs that test various rt-features
@@ -10,6 +10,7 @@ License: GPLv2
 Group:   Development/Other
 URL:     http://rt.wiki.kernel.org/index.php/Cyclictest
 Source0: %{name}-%{version}.tar.gz
+Patch0:  fix_C_argument.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
@@ -19,6 +20,7 @@ of priority-inheritance mutexes.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 
 %build
 %make
@@ -27,7 +29,7 @@ of priority-inheritance mutexes.
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%{_bindir}
 mkdir -p $RPM_BUILD_ROOT/%{_mandir}/man8
-make DESTDIR=$RPM_BUILD_ROOT%{_prefix} install
+make DESTDIR=$RPM_BUILD_ROOT prefix=%{_prefix} install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
