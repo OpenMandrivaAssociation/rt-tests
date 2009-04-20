@@ -1,5 +1,5 @@
 %define name rt-tests
-%define version 0.35
+%define version 0.36
 %define release %mkrel 1
 
 Summary: Programs that test various rt-features
@@ -10,7 +10,6 @@ License: GPLv2
 Group:   Development/Other
 URL:     http://rt.wiki.kernel.org/index.php/Cyclictest
 Source0: %{name}-%{version}.tar.gz
-Patch0:  fix_C_argument.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
@@ -20,7 +19,6 @@ of priority-inheritance mutexes.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
 
 %build
 %make
