@@ -1,5 +1,5 @@
 %define name rt-tests
-%define version 0.39
+%define version 0.40
 %define release %mkrel 1
 
 Summary: Programs that test various rt-features
@@ -40,5 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/cyclictest
 %{_bindir}/pi_stress
 %{_bindir}/signaltest
+%{_bindir}/smidetect
 %{_mandir}/man8/cyclictest.8.lzma
 %{_mandir}/man8/pi_stress.8.lzma
+%{_mandir}/man8/smidetect.8.lzma
