@@ -1,5 +1,5 @@
 %define name rt-tests
-%define version 0.40
+%define version 0.46
 %define release %mkrel 1
 
 Summary: Programs that test various rt-features
@@ -9,7 +9,7 @@ Release: %{release}
 License: GPLv2
 Group:   Development/Other
 URL:     http://rt.wiki.kernel.org/index.php/Cyclictest
-Source0: %{name}-%{version}.tar.gz
+Source0: %{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
@@ -40,7 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/cyclictest
 %{_bindir}/pi_stress
 %{_bindir}/signaltest
-%{_bindir}/smidetect
+%{_bindir}/hwlatdetect
 %{_mandir}/man8/cyclictest.8.lzma
 %{_mandir}/man8/pi_stress.8.lzma
-%{_mandir}/man8/smidetect.8.lzma
+%{_mandir}/man8/hwlatdetect.8.lzma
