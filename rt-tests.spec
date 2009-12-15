@@ -1,5 +1,5 @@
 %define name rt-tests
-%define version 0.50
+%define version 0.57
 %define release %mkrel 1
 
 Summary: Programs that test various rt-features
@@ -41,6 +41,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/pi_stress
 %{_bindir}/signaltest
 %{_bindir}/hwlatdetect
-%{_mandir}/man8/cyclictest.8.lzma
-%{_mandir}/man8/pi_stress.8.lzma
-%{_mandir}/man8/hwlatdetect.8.lzma
+%{_bindir}/ptsematest
+%{_bindir}/rt-migrate-test
+%{_bindir}/sendme
+%{_bindir}/sigwaittest
+%{_bindir}/svsematest
+%{_mandir}/man4/*.4.lzma
+%{_mandir}/man8/*.8.lzma
