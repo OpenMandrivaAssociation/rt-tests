@@ -1,5 +1,5 @@
 %define name rt-tests
-%define version 0.57
+%define version 0.60
 %define release %mkrel 1
 
 Summary: Programs that test various rt-features
@@ -36,7 +36,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %doc ChangeLog COPYING
-%{_bindir}/classic_pi
 %{_bindir}/cyclictest
 %{_bindir}/pi_stress
 %{_bindir}/signaltest
@@ -46,5 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/sendme
 %{_bindir}/sigwaittest
 %{_bindir}/svsematest
+%{_bindir}/pip
 %{_mandir}/man4/*.4.lzma
 %{_mandir}/man8/*.8.lzma
