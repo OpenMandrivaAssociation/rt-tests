@@ -1,5 +1,5 @@
 %define name rt-tests
-%define version 0.61
+%define version 0.63
 %define release %mkrel 1
 
 Summary: Programs that test various rt-features
@@ -27,6 +27,7 @@ of priority-inheritance mutexes.
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%{_bindir}
 mkdir -p $RPM_BUILD_ROOT/%{_mandir}/man8
+mkdir -p $RPM_BUILD_ROOT/%{python_sitelib}
 make DESTDIR=$RPM_BUILD_ROOT prefix=%{_prefix} install
 
 %clean
@@ -48,3 +49,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/pip
 %{_mandir}/man4/*.4.lzma
 %{_mandir}/man8/*.8.lzma
+%{python_sitelib}/hwlatdetect.py
