@@ -1,5 +1,5 @@
 %define name rt-tests
-%define version 0.66
+%define version 0.67
 %define release %mkrel 1
 
 Summary: Programs that test various rt-features
@@ -38,15 +38,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc ChangeLog COPYING
 %{_bindir}/cyclictest
+%{_bindir}/hackbench
+%{_bindir}/pip_stress
 %{_bindir}/pi_stress
-%{_bindir}/signaltest
-%{_bindir}/hwlatdetect
 %{_bindir}/ptsematest
 %{_bindir}/rt-migrate-test
 %{_bindir}/sendme
+%{_bindir}/signaltest
+%{_bindir}/hwlatdetect
 %{_bindir}/sigwaittest
 %{_bindir}/svsematest
-%{_bindir}/pip
 %{_mandir}/man4/*.4.lzma
 %{_mandir}/man8/*.8.lzma
 %{python_sitelib}/hwlatdetect.py
+%{_usrsrc}/backfire/backfire.c
