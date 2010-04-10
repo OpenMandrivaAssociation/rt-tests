@@ -1,5 +1,5 @@
 %define name rt-tests
-%define version 0.67
+%define version 0.70
 %define release %mkrel 1
 
 Summary: Programs that test various rt-features
@@ -41,6 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/hackbench
 %{_bindir}/pip_stress
 %{_bindir}/pi_stress
+%{_bindir}/pmqtest
 %{_bindir}/ptsematest
 %{_bindir}/rt-migrate-test
 %{_bindir}/sendme
