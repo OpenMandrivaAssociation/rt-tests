@@ -11,6 +11,7 @@ Group:   Development/Other
 URL:     http://rt.wiki.kernel.org/index.php/Cyclictest
 Source0: %{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRequires: python
 
 %description
 A set of programs that test and measure various components of "realtime"
