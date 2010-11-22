@@ -10,6 +10,7 @@ License: GPLv2
 Group:   Development/Other
 URL:     http://rt.wiki.kernel.org/index.php/Cyclictest
 Source0: %{name}-%{version}.tar.bz2
+Patch0: rt-tests-0.72-fix-str-fmt.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: python
 
@@ -20,9 +21,10 @@ of priority-inheritance mutexes.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p0
 
 %build
-%make
+%make CC="gcc %{optflags} %{ldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -50,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/hwlatdetect
 %{_bindir}/sigwaittest
 %{_bindir}/svsematest
-%{_mandir}/man4/*.4.lzma
-%{_mandir}/man8/*.8.lzma
+%{_mandir}/man4/*.4.*
+%{_mandir}/man8/*.8.*
 %{python_sitelib}/hwlatdetect.py
 %{_usrsrc}/backfire/backfire.c
