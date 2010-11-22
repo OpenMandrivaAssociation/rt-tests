@@ -1,6 +1,6 @@
 %define name rt-tests
 %define version 0.72
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Programs that test various rt-features
 Name:    %{name}
