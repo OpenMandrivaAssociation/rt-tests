@@ -1,0 +1,68 @@
+--- src/ptsematest/ptsematest.c.str	2010-11-22 07:44:01.000000000 +0000
++++ src/ptsematest/ptsematest.c	2010-11-22 07:44:14.000000000 +0000
+@@ -388,12 +388,12 @@
+ 					(int) ((receiver[i].sumdiff / receiver[i].samples) + 0.5),
+ 					receiver[i].maxdiff);
+ 				if (receiver[i].error[0] != '\0') {
+-					printf(receiver[i].error);
++					printf("%s",receiver[i].error);
+ 					errorlines++;
+ 					receiver[i].error[0] = '\0';
+ 				}
+ 				if (sender[i].error[0] != '\0') {
+-					printf(sender[i].error);
++					printf("%s",sender[i].error);
+ 					errorlines++;
+ 					receiver[i].error[0] = '\0';
+ 				}
+--- src/sigwaittest/sigwaittest.c.str	2010-11-22 07:45:09.000000000 +0000
++++ src/sigwaittest/sigwaittest.c	2010-11-22 07:45:24.000000000 +0000
+@@ -561,12 +561,12 @@
+ 					    receiver[i].samples) + 0.5),
+ 					    receiver[i].maxdiff);
+ 				if (receiver[i].error[0] != '\0') {
+-					printf(receiver[i].error);
++					printf("%s",receiver[i].error);
+ 					receiver[i].error[0] = '\0';
+ 					errorlines++;
+ 				}
+ 				if (sender[i].error[0] != '\0') {
+-					printf(sender[i].error);
++					printf("%s",sender[i].error);
+ 					sender[i].error[0] = '\0';
+ 					errorlines++;
+ 				}
+--- src/svsematest/svsematest.c.str	2010-11-22 07:45:42.000000000 +0000
++++ src/svsematest/svsematest.c	2010-11-22 07:45:57.000000000 +0000
+@@ -645,12 +645,12 @@
+ 					    receiver[i].samples) + 0.5),
+ 					    receiver[i].maxdiff);
+ 				if (receiver[i].error[0] != '\0') {
+-					printf(receiver[i].error);
++					printf("%s",receiver[i].error);
+ 					receiver[i].error[0] = '\0';
+ 					errorlines++;
+ 				}
+ 				if (sender[i].error[0] != '\0') {
+-					printf(sender[i].error);
++					printf("%s",sender[i].error);
+ 					sender[i].error[0] = '\0';
+ 					errorlines++;
+ 				}
+--- src/pmqtest/pmqtest.c.str	2010-11-22 07:46:25.000000000 +0000
++++ src/pmqtest/pmqtest.c	2010-11-22 07:46:37.000000000 +0000
+@@ -511,12 +511,12 @@
+ 					(int) ((receiver[i].sumdiff / receiver[i].samples) + 0.5),
+ 					receiver[i].maxdiff);
+ 				if (receiver[i].error[0] != '\0') {
+-					printf(receiver[i].error);
++					printf("%s",receiver[i].error);
+ 					errorlines++;
+ 					receiver[i].error[0] = '\0';
+ 				}
+ 				if (sender[i].error[0] != '\0') {
+-					printf(sender[i].error);
++					printf("%s",sender[i].error);
+ 					errorlines++;
+ 					receiver[i].error[0] = '\0';
+ 				}
