@@ -8,7 +8,7 @@ Version: %{version}
 Release: %{release}
 License: GPLv2
 Group:   Development/Other
-URL:     http://rt.wiki.kernel.org/index.php/Cyclictest
+URL:     https://rt.wiki.kernel.org/index.php/Cyclictest
 Source0: %{name}-%{version}.tar.bz2
 Patch0: rt-tests-0.72-fix-str-fmt.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
